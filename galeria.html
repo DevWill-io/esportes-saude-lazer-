@@ -128,6 +128,44 @@
     </div>
 </footer>
 
-<script src="script.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const anoElemento = document.getElementById('ano-atual');
+    if (anoElemento) {
+        anoElemento.textContent = new Date().getFullYear();
+    }
+
+    const cards = document.querySelectorAll('.sport-card');
+    const curiosidades = {
+        'Futebol': '⚽ O Brasil é o único pentacampeão mundial! Mais de 200 milhões de praticantes.',
+        'Vôlei': '🏐 Criado nos EUA em 1895 como "mintonette". Brasil é potência olímpica.',
+        'Atletismo': '🏃 O recorde dos 100m rasos é 9s58 (Usain Bolt). Modalidade mais antiga.',
+        'Natação': '🐬 O nado borboleta surgiu nos anos 1950. Michael Phelps é o maior medalhista.',
+        'Karatê': '🥋 Estreou em Tóquio 2020. Trabalha defesa pessoal e disciplina.',
+        'Judô': '⚡ Criado por Jigoro Kano em 1882. "Caminho suave" símbolo olímpico.'
+    };
+
+    cards.forEach(card => {
+        const nomeElem = card.querySelector('.sport-name');
+        if (!nomeElem) return;
+        let nome = nomeElem.innerText.replace('📁', '').trim();
+        if (nome.includes('Futebol')) nome = 'Futebol';
+        else if (nome.includes('Vôlei')) nome = 'Vôlei';
+        else if (nome.includes('Atletismo')) nome = 'Atletismo';
+        else if (nome.includes('Natação')) nome = 'Natação';
+        else if (nome.includes('Karatê')) nome = 'Karatê';
+        else if (nome.includes('Judô')) nome = 'Judô';
+
+        const imagemFrame = card.querySelector('.image-frame');
+        if (imagemFrame) {
+            imagemFrame.style.cursor = 'pointer';
+            imagemFrame.addEventListener('click', function() {
+                const fato = curiosidades[nome] || 'Explore esta pasta e descubra mais sobre a modalidade.';
+                alert(`📁 ${fato}`);
+            });
+        }
+    });
+});
+</script>
 </body>
 </html>
