@@ -1,0 +1,228 @@
+:root {
+    --cor1: rgb(8, 9, 36);
+    --cor2: rgb(24, 27, 65);
+    --cor3: rgb(45, 53, 105);
+    --cor4: rgb(255, 190, 118);
+    --cor5: rgb(255, 225, 200);
+    --cor6: rgb(165, 178, 245);
+    --cor7: rgb(220, 226, 255);
+    --container-max: 1200px;
+    --transition-padrao: all 0.3s ease;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    background: linear-gradient(135deg, var(--cor7) 0%, var(--cor5) 100%);
+    margin: 0;
+    padding: 20px;
+    color: var(--cor1);
+    line-height: 1.5;
+}
+
+body > *:not(nav):not(#rodape) {
+    max-width: var(--container-max);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#menu {
+    background: var(--cor1);
+    border-radius: 40px;
+    padding: 1rem 2rem;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: center;
+    gap: 1.2rem;
+}
+
+#menu h2 {
+    color: var(--cor4);
+    font-size: 1.3rem;
+    margin: 0;
+    letter-spacing: -0.5px;
+}
+
+#menu a {
+    color: var(--cor7);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    transition: var(--transition-padrao);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+#menu a:hover {
+    background-color: var(--cor4);
+    color: var(--cor1);
+    transform: translateY(-2px);
+}
+
+h1 {
+    font-size: 2.8rem;
+    background: linear-gradient(120deg, var(--cor1), var(--cor3));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-align: center;
+    margin-bottom: 0.2rem;
+}
+
+h2 {
+    text-align: center;
+    color: var(--cor2);
+    font-weight: 400;
+    border-bottom: 2px solid var(--cor4);
+    display: inline-block;
+    width: auto;
+    margin: 0 auto 2rem auto;
+    padding-bottom: 0.5rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+    margin: 0 0 0.5rem 0;
+    color: var(--cor1);
+    position: relative;
+    display: inline-block;
+}
+
+h3::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: var(--cor4);
+    border-radius: 3px;
+}
+
+body > h3, body > ul {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ul {
+    list-style: none;
+    padding: 1.2rem 1.8rem;
+    background: white;
+    border-radius: 28px;
+    box-shadow: 0 15px 30px rgba(8, 9, 36, 0.1);
+    transition: var(--transition-padrao);
+    margin-bottom: 2rem;
+    backdrop-filter: blur(2px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+ul:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 40px rgba(8, 9, 36, 0.15);
+}
+
+li {
+    margin: 0.8rem 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    font-size: 1rem;
+}
+
+li strong {
+    min-width: 85px;
+    color: var(--cor2);
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+    color: var(--cor3);
+    font-weight: 500;
+    transition: var(--transition-padrao);
+    word-break: break-all;
+}
+
+li a:hover {
+    color: var(--cor4);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+a[href*="wa.me"]::before {
+    content: "📱 ";
+    font-size: 0.9rem;
+}
+
+a[href*="instagram.com"]::before {
+    content: "📸 ";
+}
+
+a[href^="mailto"]::before {
+    content: "✉️ ";
+}
+
+li:has(> strong + :not(a)) {
+    opacity: 0.85;
+}
+
+#rodape {
+    background: var(--cor1);
+    color: var(--cor7);
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+    border-radius: 40px 40px 20px 20px;
+}
+
+.titulo-rodape {
+    font-size: 1.4rem;
+    color: var(--cor4);
+    margin-bottom: 0.5rem;
+}
+
+.texto-rodape {
+    max-width: 500px;
+    margin: 0 auto 0.8rem;
+    font-size: 0.9rem;
+}
+
+.copyright {
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+@media (max-width: 700px) {
+    body {
+        padding: 15px;
+    }
+
+    #menu {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        border-radius: 30px;
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    ul {
+        padding: 1rem;
+    }
+
+    li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    li strong {
+        min-width: auto;
+    }
+}
