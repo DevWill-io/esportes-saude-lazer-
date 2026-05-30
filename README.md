@@ -81,20 +81,17 @@ Esportes:Saúde e Lazer/
 
 - Futebol
 - Vôlei
-- Basquete
 - Atletismo
-- Esportes Olímpicos
-- Notícias esportivas
-- Curiosidades
-- Estatísticas
 - Galeria de imagens
+- Natação
+- Informações
+- Regras dos Esportes
 
 ---
 
 ## 👥 Equipe do Projeto
 
-- **Williams Silva Alv
-- es**
+- **Williams Silva Alves**
 - **Kamile Candice Lins Maia Bezerra**
 - **Joaquim José Pereira Neto**
 - **Aparecida Soares de Araujo**
@@ -111,7 +108,7 @@ O objetivo principal é criar uma plataforma visual e informativa voltada ao uni
 
 ## 🚀 Status do Projeto
 
-🟡 Em desenvolvimento
+🟢 On-line
 
 ---
 
