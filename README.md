@@ -32,6 +32,8 @@ Esportes:Saúde e Lazer/
 ├── styles/
 │   └── index.css
 │   └── esportes.css
+│   └── esportes2.css
+│   └── galeria.css
 │
 ├── img/
 │   └── img.jpeg
@@ -57,7 +59,8 @@ Esportes:Saúde e Lazer/
 
 ## 👥 Equipe do Projeto
 
-- **Williams Silva Alves**
+- **Williams Silva Alv
+- es**
 - **Kamile Candice Lins Maia Bezerra**
 - **Joaquim José Pereira Neto**
 - **Aparecida Soares de Araujo**
