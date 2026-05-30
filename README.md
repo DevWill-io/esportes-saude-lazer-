@@ -28,16 +28,36 @@ O site poderá abordar modalidades esportivas, notícias, atletas, competições
 ```bash
 Esportes:Saúde e Lazer/
 │
-├── index.html
+├── componentes/
+│   └── williams.html
+│   └── joaquim.html
+│   └── kamile.html
+│   └── aparecida.html
+│
+├── esportes/
+│   └── volei.html
+│   └── futebol.html
+│   └── atletismo.html
+│   └── natacao.html
+│   └── artes_marciais.html
+│
 ├── styles/
 │   └── index.css
 │   └── esportes.css
 │   └── esportes2.css
 │   └── galeria.css
+│   └── componentes.css
 │
 ├── img/
 │   └── img.jpeg
+│   └── esportes.jpeg
+│   └── esportes.jpeg
+│   └── esportes.jpeg
+│   └── esportes.jpeg
 │
+├── index.html
+├── galeria.html
+├── contato.html
 └── README.md
 ```
 
